@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         b_dash = (Button) findViewById(R.id.btn_dash);
+        b_prof = (Button) findViewById(R.id.btn_profile);
         b_dash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(pindah);
             }
         });
+
+
+        b_prof.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pindah = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(pindah);
+            }
+        });
+
 
     }
 }

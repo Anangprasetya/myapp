@@ -1,5 +1,6 @@
 package com.anang.myapplicationmobilepraktikum;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -37,6 +38,22 @@ public class DatabaseSQLite extends SQLiteOpenHelper {
         }
         else {
             return false;
+        }
+    }
+
+
+    //upgrade session
+    public Boolean upgradeSession(String sessionValues, int id, String usr) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("login", sessionValues);
+        contentValues.put("user_username", usr);
+        long update = db.update("session", contentValues, "id="+id, null);
+        if (update == -1) {
+            return false;
+        }
+        else {
+            return true;
         }
     }
 
