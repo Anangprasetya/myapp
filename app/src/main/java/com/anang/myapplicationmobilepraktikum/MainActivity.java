@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         db = new DatabaseSQLite(this);
+//        db.perbarui(db.getWritableDatabase());
 
         Boolean checkSession = db.checkSession("ada");
         if (checkSession == false) {

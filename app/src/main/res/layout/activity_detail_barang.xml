@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailBarangActivity">
+
+    <TextView
+        android:id="@+id/nama_brg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="104dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/harga_brg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/nama_brg"
+        android:layout_below="@+id/nama_brg"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/stok_brg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/harga_brg"
+        android:layout_below="@+id/harga_brg"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/ukuran_brg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/stok_brg"
+        android:layout_below="@+id/stok_brg"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/kualitas_brg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ukuran_brg"
+        android:layout_below="@+id/ukuran_brg"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/kualitas_brg"
+        android:layout_alignBottom="@+id/kualitas_brg"
+        android:layout_alignLeft="@+id/TextView03"
+        android:text="Kualitas Barang" />
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ukuran_brg"
+        android:layout_alignBottom="@+id/ukuran_brg"
+        android:layout_alignLeft="@+id/TextView04"
+        android:text="Ukuran Barang" />
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/stok_brg"
+        android:layout_alignBottom="@+id/stok_brg"
+        android:layout_alignLeft="@+id/TextView02"
+        android:text="Stok Barang" />
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/harga_brg"
+        android:layout_alignBottom="@+id/harga_brg"
+        android:layout_alignLeft="@+id/TextView01"
+        android:text="Harga Barang" />
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/harga_brg"
+        android:layout_alignParentLeft="true"
+        android:text="Nama Barang" />
+    <Button
+        android:id="@+id/kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView05"
+        android:layout_below="@+id/TextView05"
+        android:layout_marginTop="34dp"
+        android:text="Back" />
+
+</RelativeLayout>
