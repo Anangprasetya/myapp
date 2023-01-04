@@ -16,7 +16,9 @@ public class DatabaseSQLite extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE session(id integer PRIMARY KEY, login text, user_username text)");
+        sqLiteDatabase.execSQL("create table barang(id_brg integer primary key, nama_brg text, harga_brg text, stok_brg text, ukuran_brg text, kualitas_brg text);");
         sqLiteDatabase.execSQL("INSERT INTO session(id, login, user_username) VALUES(1, 'kosong', 'kosong')");
+        sqLiteDatabase.execSQL("INSERT INTO barang(nama_brg, harga_brg, stok_brg, ukuran_brg, kualitas_brg) VALUES('Cat Tembok', '13000', '23', 'Kecil', 'Baru')");
     }
 
     @Override
@@ -26,6 +28,7 @@ public class DatabaseSQLite extends SQLiteOpenHelper {
 
     public void perbarui(SQLiteDatabase db){
         db.execSQL("DROP TABLE IF EXISTS session");
+        db.execSQL("DROP TABLE IF EXISTS barang");
         onCreate(db);
     }
 

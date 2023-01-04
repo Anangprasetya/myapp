@@ -28,6 +28,18 @@ public class MainActivity extends AppCompatActivity {
 
         b_dash = (Button) findViewById(R.id.btn_dash);
         b_prof = (Button) findViewById(R.id.btn_profile);
+        b_loc = (Button) findViewById(R.id.btn_location);
+
+        b_loc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent pindah = new Intent(MainActivity.this, LocationActivity.class);
+                startActivity(pindah);
+            }
+        });
+
+
+
         b_dash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
