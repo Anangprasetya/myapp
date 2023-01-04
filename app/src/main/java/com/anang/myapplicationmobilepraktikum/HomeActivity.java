@@ -34,7 +34,9 @@ public class HomeActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent inte = new Intent(HomeActivity.this,
+                        MainActivity.class);
+                startActivity(inte);
             }
         });
 
@@ -78,18 +80,15 @@ public class HomeActivity extends AppCompatActivity {
                                         startActivity(i);
                                         break;
                                     case 1 :
-                                        Intent in = new
-                                                Intent(getApplicationContext(), MainActivity.class);
-
-                                        in.putExtra("nama", selection);
+                                        Intent in = new Intent(getApplicationContext(), UpdateBarangActivity.class);
+                                        in.putExtra("namaBarang", selection);
                                         startActivity(in);
 
                                         break;
                                     case 2 :
-                                        SQLiteDatabase db =
-                                                dbcenter.getWritableDatabase();
+                                        SQLiteDatabase db = dbcenter.getWritableDatabase();
 
-                                        db.execSQL("delete from biodata where nama = '"+selection+"'");
+                                        db.execSQL("delete from barang where nama_brg = '"+selection+"'");
                                         RefreshList();
                                         break;
                                 }
