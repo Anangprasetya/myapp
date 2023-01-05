@@ -1,96 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
     tools:context=".UpdateBarangActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Name" />
+
     <EditText
-        android:id="@+id/editTextup1"
+        android:id="@+id/txtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1" >
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="16dp"
+        android:hint="Masukkan Nama Barang">
         <requestFocus />
     </EditText>
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="Nama Barang" />
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editTextup1"
-        android:layout_below="@+id/editTextup1"
-        android:layout_marginTop="10dp"
-        android:text="Harga Barang" />
-    <EditText
-        android:id="@+id/editTextup2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2" />
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editTextup2"
-        android:layout_below="@+id/editTextup2"
-        android:layout_marginTop="10dp"
-        android:text="Stok Barang" />
-    <EditText
-        android:id="@+id/editTextup3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3" />
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editTextup3"
-        android:layout_below="@+id/editTextup3"
-        android:layout_marginTop="10dp"
-        android:text="Ukuran Barang" />
-    <EditText
-        android:id="@+id/editTextup4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/textView4" />
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editTextup4"
-        android:layout_below="@+id/editTextup4"
-        android:layout_marginTop="10dp"
-        android:text="Kualitas Barang" />
-    <EditText
-        android:id="@+id/editTextup5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_below="@+id/textView5" />
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editTextup5"
-        android:layout_alignParentBottom="true"
-        android:text="Update" />
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_toRightOf="@+id/textView4"
-        android:text="Back" />
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="Harga" />
+
+    <EditText
+        android:id="@+id/txtharga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp"
+        android:hint="Masukkan Haarga Barang" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Stok" />
+
+    <EditText
+        android:id="@+id/txtstok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="16dp"
+        android:hint="Masukkan Stok Barang" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Ukuran" />
+
+    <EditText
+        android:id="@+id/txtukuran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="16dp"
+        android:hint="Masukkan Ukuran Barang" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Ukuran" />
+
+    <EditText
+        android:id="@+id/txtkualitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="18dp"
+        android:hint="Masukkan Kualitas Barang" />
+
+    <Button android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:id="@+id/buttonSimpan"
+        android:textSize="20dp"
+        android:background="@color/teal_200"
+        android:textColor="@android:color/background_light"
+        android:layout_alignParentBottom="true"
+        android:text="PERBARUI"
+        />
+
+</LinearLayout>

@@ -2,6 +2,7 @@ package com.anang.myapplicationmobilepraktikum;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -23,11 +24,11 @@ public class UpdateBarangActivity extends AppCompatActivity {
         setContentView(R.layout.activity_update_barang);
 
         dbHelper = new DatabaseSQLite(this);
-        text1 = (EditText) findViewById(R.id.editTextup1);
-        text2 = (EditText) findViewById(R.id.editTextup2);
-        text3 = (EditText) findViewById(R.id.editTextup3);
-        text4 = (EditText) findViewById(R.id.editTextup4);
-        text5 = (EditText) findViewById(R.id.editTextup5);
+        text1 = (EditText) findViewById(R.id.txtName);
+        text2 = (EditText) findViewById(R.id.txtharga);
+        text3 = (EditText) findViewById(R.id.txtstok);
+        text4 = (EditText) findViewById(R.id.txtukuran);
+        text5 = (EditText) findViewById(R.id.txtkualitas);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         cursor = db.rawQuery("SELECT * FROM barang WHERE nama_brg = '" + getIntent().getStringExtra("namaBarang") + "'",null);
         cursor.moveToFirst();
@@ -42,8 +43,8 @@ public class UpdateBarangActivity extends AppCompatActivity {
             text5.setText(cursor.getString(5).toString());
         }
 
-        ton1 = (Button) findViewById(R.id.button1);
-        ton2 = (Button) findViewById(R.id.button2);
+        ton1 = (Button) findViewById(R.id.buttonSimpan);
+//        ton2 = (Button) findViewById(R.id.button2);
 
         ton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,18 +55,21 @@ public class UpdateBarangActivity extends AppCompatActivity {
                         text3.getText().toString() +"', ukuran_brg='"
                         +
                         text4.getText().toString() + "', kualitas_brg='"+text5.getText().toString()+"' where nama_brg='" +cursor.getString(1).toString()+"'");
-                Toast.makeText(getApplicationContext(), "Berhasil Update Data Barang", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),
+                        "Berhasil Di Perbarui", Toast.LENGTH_LONG).show();
 //                HomeActivity.ma.RefreshList();
+                Intent pindah = new Intent(UpdateBarangActivity.this, HomeActivity.class);
+                startActivity(pindah);
                 finish();
             }
         });
 
-        ton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+//        ton2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                finish();
+//            }
+//        });
 
 
     }

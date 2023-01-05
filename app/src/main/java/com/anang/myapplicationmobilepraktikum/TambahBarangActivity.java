@@ -24,14 +24,14 @@ public class TambahBarangActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tambah_barang);
 
         dbHelper = new DatabaseSQLite(this);
-        text1 = (EditText) findViewById(R.id.editText1);
-        text2 = (EditText) findViewById(R.id.editText2);
-        text3 = (EditText) findViewById(R.id.editText3);
-        text4 = (EditText) findViewById(R.id.editText4);
-        text5 = (EditText) findViewById(R.id.editText5);
+        text1 = (EditText) findViewById(R.id.txtName);
+        text2 = (EditText) findViewById(R.id.txtharga);
+        text3 = (EditText) findViewById(R.id.txtstok);
+        text4 = (EditText) findViewById(R.id.txtukuran);
+        text5 = (EditText) findViewById(R.id.txtkualitas);
 
-        ton1 = (Button) findViewById(R.id.button1);
-        ton2 = (Button) findViewById(R.id.button2);
+        ton1 = (Button) findViewById(R.id.buttonSimpan);
+//        ton2 = (Button) findViewById(R.id.button2);
 
         ton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,11 +53,11 @@ public class TambahBarangActivity extends AppCompatActivity {
             }
         });
 
-        ton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+//        ton2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                finish();
+//            }
+//        });
     }
 }
