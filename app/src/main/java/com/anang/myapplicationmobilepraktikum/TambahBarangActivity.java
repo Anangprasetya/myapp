@@ -2,10 +2,14 @@ package com.anang.myapplicationmobilepraktikum;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class TambahBarangActivity extends AppCompatActivity {
 
@@ -25,5 +29,35 @@ public class TambahBarangActivity extends AppCompatActivity {
         text3 = (EditText) findViewById(R.id.editText3);
         text4 = (EditText) findViewById(R.id.editText4);
         text5 = (EditText) findViewById(R.id.editText5);
+
+        ton1 = (Button) findViewById(R.id.button1);
+        ton2 = (Button) findViewById(R.id.button2);
+
+        ton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SQLiteDatabase db =
+                        dbHelper.getWritableDatabase();
+                db.execSQL("insert into barang(nama_brg, harga_brg, stok_brg, ukuran_brg, kualitas_brg) values('" +
+                        text1.getText().toString()+"','"+
+                        text2.getText().toString() +"','" +
+                        text3.getText().toString()+"','"+
+                        text4.getText().toString() +"','" +
+                        text5.getText().toString() + "')");
+                Toast.makeText(getApplicationContext(),
+                        "Berhasil", Toast.LENGTH_LONG).show();
+//                HomeActivity.ma.RefreshList();
+                Intent pindah = new Intent(TambahBarangActivity.this, HomeActivity.class);
+                startActivity(pindah);
+                finish();
+            }
+        });
+
+        ton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }

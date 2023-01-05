@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Nomor" />
+        android:text="Nama Barang" />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
         android:layout_alignLeft="@+id/editText1"
         android:layout_below="@+id/editText1"
         android:layout_marginTop="10dp"
-        android:text="Nama" />
+        android:text="Harga Barang" />
     <EditText
         android:id="@+id/editText2"
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
         android:layout_alignLeft="@+id/editText2"
         android:layout_below="@+id/editText2"
         android:layout_marginTop="10dp"
-        android:text="Tanggal Lahir" />
+        android:text="Stok Barang" />
     <EditText
         android:id="@+id/editText3"
         android:layout_width="match_parent"
@@ -56,7 +56,7 @@
         android:layout_alignLeft="@+id/editText3"
         android:layout_below="@+id/editText3"
         android:layout_marginTop="10dp"
-        android:text="Jenis Kelamin" />
+        android:text="Ukuran Barang" />
     <EditText
         android:id="@+id/editText4"
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
         android:layout_alignLeft="@+id/editText4"
         android:layout_below="@+id/editText4"
         android:layout_marginTop="10dp"
-        android:text="Alamat" />
+        android:text="Kualitas Barang" />
     <EditText
         android:id="@+id/editText5"
         android:layout_width="match_parent"
