@@ -24,7 +24,7 @@
         android:background="@color/teal_200"
         android:textColor="@android:color/background_light"
         android:layout_alignParentBottom="true"
-        android:text="ADD"
+        android:text="TAMBAH BARANG"
         />
 
 

@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         b_dash = (Button) findViewById(R.id.btn_dash);
         b_prof = (Button) findViewById(R.id.btn_profile);
         b_loc = (Button) findViewById(R.id.btn_location);
+        b_about = (Button) findViewById(R.id.btn_about);
 
         b_loc.setOnClickListener(new View.OnClickListener() {
             @Override

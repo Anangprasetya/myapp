@@ -1,46 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/hijau_mentah"
     tools:context=".MainActivity">
 
-
-    <Button
-        android:id="@+id/btn_location"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Location"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="250dp"
-        tools:ignore="MissingConstraints" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_dash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Dashboard"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="331dp"
-        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btn_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Profile"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="415dp"
-        tools:ignore="MissingConstraints" />
+        <Button
+            android:id="@+id/btn_location"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="LOCATION"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/btn_about"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About Me"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="514dp"
-        tools:ignore="MissingConstraints" />
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_dash"
+            android:text="DASHBOARD"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_profile"
+            android:text="PROFILE"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_about"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:text="ABOUT ME"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
