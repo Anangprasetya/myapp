@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -86,8 +87,9 @@ public class HomeActivity extends AppCompatActivity {
                                         break;
                                     case 2 :
                                         SQLiteDatabase db = dbcenter.getWritableDatabase();
-
                                         db.execSQL("delete from barang where nama_brg = '"+selection+"'");
+                                        Toast.makeText(getApplicationContext(),
+                                                "Berhasil Menghapus Barang", Toast.LENGTH_LONG).show();
                                         RefreshList();
                                         break;
                                 }

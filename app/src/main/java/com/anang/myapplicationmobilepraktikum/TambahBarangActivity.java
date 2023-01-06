@@ -45,7 +45,7 @@ public class TambahBarangActivity extends AppCompatActivity {
                         text4.getText().toString() +"','" +
                         text5.getText().toString() + "')");
                 Toast.makeText(getApplicationContext(),
-                        "Berhasil", Toast.LENGTH_LONG).show();
+                        "Berhasil Menambah Barang", Toast.LENGTH_LONG).show();
 //                HomeActivity.ma.RefreshList();
                 Intent pindah = new Intent(TambahBarangActivity.this, HomeActivity.class);
                 startActivity(pindah);

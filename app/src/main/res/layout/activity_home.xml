@@ -7,20 +7,25 @@
     android:background="#ecf0f1"
     tools:context=".HomeActivity">
 
-    <Button
-        android:id="@+id/btn_tambah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        style="?android:attr/borderlessButtonStyle"
-        android:text="Tambah Bahan"
-        android:textColor="@color/black"/>
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_tambah"
+
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
     </ListView>
+
+    <Button android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textStyle="bold"
+        android:id="@+id/btn_tambah"
+        android:textSize="20dp"
+        android:background="@color/teal_200"
+        android:textColor="@android:color/background_light"
+        android:layout_alignParentBottom="true"
+        android:text="ADD"
+        />
+
+
 </RelativeLayout>
